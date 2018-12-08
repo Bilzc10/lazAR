@@ -53,7 +53,7 @@ window.onload = function() {
     });
 
     // Start tracking
-    tracking.track(webcam, tracker, { camera: true, facingMode: "environment" } );
+    tracking.track(webcam, tracker, { camera: true } );
 
     // Add listener for the click event on the video
     webcam.addEventListener("click", function (e) {
