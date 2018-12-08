@@ -30,7 +30,7 @@ io.sockets.on("connection", function(socket) {
     }
     else {
       playerList[playerArray[0]].health--;
-      cb(playerList[playerArray[1]].score++);
+      (playerList[playerArray[1]].score++);
       socket.broadcast.emit('health', playerList[playerArray[0]].health);
     }
   });

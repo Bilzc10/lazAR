@@ -123,7 +123,7 @@ window.onload = function() {
         document.getElementById("webcam").style.display = "none";
         setTimeout(function() {
           document.getElementById("webcam").style.display = "block";
-        }, 100);
+        }, 40);
         ammo--;
         document.getElementById("ammo").innerHTML = ammo;
       }
