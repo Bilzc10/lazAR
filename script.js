@@ -114,13 +114,19 @@ window.onload = function() {
       shoot();
     });
     function shoot() {
-      if(targeted == true) {
-        socket.emit("shoot", function(score) {
-          document.getElementById("score") = score;
-        });
+      if(ammo > 0) {
+        if(targeted == true) {
+          socket.emit("shoot", function(score) {
+            document.getElementById("score") = score;
+          });
+        }
+        document.getElementById("webcam").style.display = "none";
+        setTimeout(function() {
+          document.getElementById("webcam").style.display = "block";
+        }, 100);
+        ammo--;
+        document.getElementById("ammo").innerHTML = ammo;
       }
-      ammo--;
-      document.getElementById("ammo").innerHTML = ammo;
     }
 
     document.getElementById("body").addEventListener("mousedown", function() {
