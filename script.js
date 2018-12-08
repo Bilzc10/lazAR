@@ -39,7 +39,6 @@ window.onload = function() {
 
     // Create the color tracking object
     var tracker = new tracking.ColorTracker("dynamic");
-
     // Add callback for the "track" event
     tracker.on('track', function(e) {
       context.clearRect(0, 0, canvas.width, canvas.height);
@@ -54,7 +53,7 @@ window.onload = function() {
     });
 
     // Start tracking
-    tracking.track(webcam, tracker, { camera: true } );
+    tracking.track(webcam, tracker, { camera: true, facingMode: "environment" } );
 
     // Add listener for the click event on the video
     webcam.addEventListener("click", function (e) {
