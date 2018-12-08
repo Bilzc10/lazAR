@@ -1,0 +1,24 @@
+{
+  "name": "lazar",
+  "version": "1.0.0",
+  "description": "csjoe 2",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bilzc10/lazAR.git"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bilzc10/lazAR/issues"
+  },
+  "homepage": "https://github.com/Bilzc10/lazAR#readme"
+}
