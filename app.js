@@ -23,14 +23,14 @@ io.sockets.on("connection", function(socket) {
   socket.emit("connected", playerList.length);
 
   socket.on("shoot", function(cb) {
-    if(socket == playerList[0]) {
+    if(socket == playerArray[0]) {
       playerList[playerArray[1]].health--;
       cb(playerList[playerArray[0]].score++);
       socket.broadcast.emit('health', playerList[playerArray[1]].health);
     }
     else {
       playerList[playerArray[0]].health--;
-      (playerList[playerArray[1]].score++);
+      cb(playerList[playerArray[1]].score++);
       socket.broadcast.emit('health', playerList[playerArray[0]].health);
     }
   });
