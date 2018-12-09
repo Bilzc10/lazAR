@@ -7,8 +7,8 @@ window.onload = function() {
     }
     var targeted = false;
     var ammo = 10;
-    var hp = 3;
-    
+    var hp = 3; 
+
   //Scanner
     socket.on("connected", function(data) {
       if(data <= 1) {
