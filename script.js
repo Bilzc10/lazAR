@@ -7,7 +7,7 @@ window.onload = function() {
     }
     var targeted = false;
     var ammo = 10;
-    var hp = 3; 
+    var hp = 3;
 
   //Scanner
     socket.on("connected", function(data) {
@@ -27,8 +27,8 @@ window.onload = function() {
     var canvas  = document.getElementById('canvas');
     var context = canvas.getContext('2d');
     var webcam = document.getElementById('webcam');
-    var vw = 980;
-    var vh = 668;
+    var vw = 490;
+    var vh = 334;
 
     var clickTimer;
 
