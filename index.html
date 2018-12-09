@@ -10,7 +10,7 @@
     <script src="script.js"></script>
     <style>
     video, canvas, .overlay, #crosshair {
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -24,29 +24,29 @@
     .overlay {
       width: 100%;
       height: 100%;
-      position: absolute;
+      position: fixed;
       z-index: 3;
       padding: 5;
     }
     .health {
       left: 0;
       top: 0;
-      position: absolute;
+      position: fixed;
     }
     .ammo {
       right: 0;
       top: 0;
-      position: absolute;
+      position: fixed;
     }
     #player {
       left: 0;
       bottom: 0;
-      position: absolute;
+      position: fixed;
     }
     .score {
       right: 0;
       bottom: 0;
-      position: absolute;
+      position: fixed;
     }
     p {
       font-size: 20px;
