@@ -25,11 +25,17 @@ io.sockets.on("connection", function(socket) {
   socket.on("shoot", function(cb) {
     if(socket == playerArray[0]) {
       playerList[playerArray[1]].health--;
+      if(playerList[playerArray[1]].health < 0) {
+        playerList[playerArray[1]].health = 0;
+      }
       cb(playerList[playerArray[0]].score++);
       socket.broadcast.emit('health', playerList[playerArray[1]].health);
     }
     else {
       playerList[playerArray[0]].health--;
+      if(playerList[playerArray[1]].health < 0) {
+        playerList[playerArray[1]].health = 0;
+      }
       cb(playerList[playerArray[1]].score++);
       socket.broadcast.emit('health', playerList[playerArray[0]].health);
     }
