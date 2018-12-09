@@ -9,7 +9,7 @@ window.onload = function() {
     var ammo = 10;
     var hp = 3;
     alert(window.innerWidth + " " + window.innerHeight);
-  /*Scanner
+  //Scanner
     socket.on("connected", function(data) {
       if(data <= 1) {
         document.getElementById("player").innerHTML = "Player " + (data + 1);
@@ -27,8 +27,8 @@ window.onload = function() {
     var canvas  = document.getElementById('canvas');
     var context = canvas.getContext('2d');
     var webcam = document.getElementById('webcam');
-    var vw = 1024;
-    var vh = 768;
+    var vw = 980;
+    var vh = 668;
 
     var clickTimer;
 
@@ -144,5 +144,5 @@ window.onload = function() {
     });
     document.getElementById("body").addEventListener("touchend", function() {
       clearTimeout(clickTimer);
-    });*/
+    });
 }
