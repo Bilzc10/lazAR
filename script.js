@@ -1,6 +1,6 @@
 window.onload = function() {
   //Definitions
-    const socket = io();
+    const socket = io({transports: ['websocket']});
     var center = {
       x: 0,
       y: 0
