@@ -34,7 +34,7 @@ io.sockets.on("connection", function(socket) {
     else {
       playerList[playerArray[0]].health--;
       if(playerList[playerArray[0]].health < 0) {
-        playerList[playerArray[1]].health = 0;
+        playerList[playerArray[0]].health = 0;
       }
       cb(playerList[playerArray[1]].score++);
       socket.broadcast.emit('health', playerList[playerArray[0]].health);
