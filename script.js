@@ -127,6 +127,24 @@ window.onload = function() {
     }
 
     document.getElementById("body").addEventListener("mousedown", function() {
+      reload();
+    });
+    document.getElementById("body").addEventListener("mouseup", function() {
+      clearTimeout(clickTimer);
+      clearInterval(clickInterval);
+      document.getElementById("reload").style["border-width"] = "0px";
+      document.getElementById("reload").style.width = "0%";
+    });
+    document.getElementById("body").addEventListener("touchstart", function() {
+      reload();
+    });
+    document.getElementById("body").addEventListener("touchend", function() {
+      clearTimeout(clickTimer);
+      clearInterval(clickInterval);
+      document.getElementById("reload").style["border-width"] = "0px";
+      document.getElementById("reload").style.width = "0%";
+    });
+    function reload() {
       clickTimer = setTimeout(function() {
         ammo = 11;
       }, 1000);
@@ -142,19 +160,5 @@ window.onload = function() {
            document.getElementById("reload").style.width = "0%";
          }
       }, 1000/60);
-    });
-    document.getElementById("body").addEventListener("mouseup", function() {
-      clearTimeout(clickTimer);
-      clearInterval(clickInterval);
-      document.getElementById("reload").style["border-width"] = "0px";
-      document.getElementById("reload").style.width = "0%";
-    });
-    document.getElementById("body").addEventListener("touchstart", function() {
-      clickTimer = setTimeout(function() {
-        ammo = 11;
-      }, 1000);
-    });
-    document.getElementById("body").addEventListener("touchend", function() {
-      clearTimeout(clickTimer);
-    });
+    }
 }
