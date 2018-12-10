@@ -52,6 +52,16 @@
     p {
       font-size: 20px;
     }
+    #reload {
+      background-color: limegreen;
+      position: fixed;
+      top: 5%;
+      left: 35%;
+      width: 0%;
+      height: 5%;
+      border-style: solid;
+      border-width: 0;
+    }
     </style>
   </head>
   <body style="margin: 0; padding: 0; position: fixed" id="body">
@@ -60,6 +70,7 @@
       <canvas id="canvas" width="980" height="668"></canvas>
     </div>
     <div class="overlay">
+      <div id="reload"></div>
       <p class="health">Health: <span id="health">5</span></p>
       <p class="ammo">Ammo: <span id="ammo">10</span></p>
       <p id="player" style="display: none"><!--player 1/2--></p>

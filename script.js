@@ -31,6 +31,7 @@ window.onload = function() {
     var vh = 334;
 
     var clickTimer;
+    var clickInterval;
 
     // Register our custom color tracking function
     tracking.ColorTracker.registerColor('dynamic', function(r, g, b) {
@@ -120,10 +121,6 @@ window.onload = function() {
             document.getElementById("score") = score;
           });
         }
-        document.getElementById("webcam").style.display = "none";
-        setTimeout(function() {
-          document.getElementById("webcam").style.display = "block";
-        }, 40);
         ammo--;
         document.getElementById("ammo").innerHTML = ammo;
       }
@@ -131,16 +128,31 @@ window.onload = function() {
 
     document.getElementById("body").addEventListener("mousedown", function() {
       clickTimer = setTimeout(function() {
-        ammo = 10;
-      }, 5000);
+        ammo = 11;
+      }, 1000);
+      document.getElementById("reload").style["border-width"] = "4px";
+      var width = 0;
+      clickInterval = setInterval(function() {
+         width += 2;
+         document.getElementById("reload").style.width = width + "%";
+         if(width > 30) {
+           clearTimeout(clickTimer);
+           clearInterval(clickInterval);
+           document.getElementById("reload").style["border-width"] = "0px";
+           document.getElementById("reload").style.width = "0%";
+         }
+      }, 1000/60);
     });
     document.getElementById("body").addEventListener("mouseup", function() {
       clearTimeout(clickTimer);
+      clearInterval(clickInterval);
+      document.getElementById("reload").style["border-width"] = "0px";
+      document.getElementById("reload").style.width = "0%";
     });
     document.getElementById("body").addEventListener("touchstart", function() {
       clickTimer = setTimeout(function() {
-        ammo = 10;
-      }, 5000);
+        ammo = 11;
+      }, 1000);
     });
     document.getElementById("body").addEventListener("touchend", function() {
       clearTimeout(clickTimer);
