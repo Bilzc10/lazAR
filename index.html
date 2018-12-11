@@ -10,11 +10,17 @@
     <script src="tracking-min.js"></script>
     <script src="script.js"></script>
     <style>
-    video, canvas, .overlay, #crosshair {
+    video, canvas {
       position: fixed;
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 0);
+    }
+    .overlay, #crosshair {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     video {
       z-index: 0;
