@@ -98,7 +98,7 @@ window.onload = function() {
     setInterval(function() {
       if(center.x > (vw*.9) && center.x < (vw*1.1) && center.y > (vh*0.9) && center.y < (vh*1.1)) {
         targeted = true;
-        document.getElementById("chsvg").style.color = "red";
+        document.getElementById("chsvg").style.color = "blue";
         //console.log("center: (" + center.x + "," + center.y + ")      window center: (" + vw + "," + vh + ")");
       }
       else {
