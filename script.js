@@ -27,8 +27,8 @@ window.onload = function() {
     var canvas  = document.getElementById('canvas');
     var context = canvas.getContext('2d');
     var webcam = document.getElementById('webcam');
-    var vw = 490;
-    var vh = 334;
+    var vw = 600;
+    var vh = 350;
 
     var clickTimer;
     var clickInterval;
